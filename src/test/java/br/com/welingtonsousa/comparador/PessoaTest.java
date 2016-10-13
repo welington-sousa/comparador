@@ -14,7 +14,7 @@ public class PessoaTest {
     private List<Diferenca> diferenca;
 
     @Before
-    public void setUp() throws Exception {
+    public void inicializacao() throws Exception {
 	this.anoPassado = new Pessoa("José", "Welington", 25,
 		"Dev. Java Junior");
 	this.esteAno = new Pessoa("José", "Filho", 26, "Dev. Java Pleno");
@@ -22,7 +22,7 @@ public class PessoaTest {
     }
 
     @Test
-    public void test() {
+    public void deveVefiricarSeHaDiferenca() {
 	assertEquals(3, diferenca.size());
 	diferenca.forEach(System.out::println);
     }
